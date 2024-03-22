@@ -1,0 +1,24 @@
+{% extends "global/base.html" %}
+
+{% block content %}
+<div class="container-geral">
+    <div class="header-page">
+        <h1>Escolha o tipo de sorteio</h1>
+        <p>Clique em alguma das opções a baixo.</p>
+    </div>
+    <div class="content-page">
+        <a class="botao-menu" href="{% url "sorteio:sorteio_time" %}">
+            <div class="box-button">
+                <h2>Sortear Times</h2>
+            </div>
+        </a>
+        <a class="botao-menu" href="{% url "sorteio:sorteio_nome" %}">
+            <div class="box-button">
+                <h2>Sortear Nomes</h2>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,53 @@
+{% extends "global/base.html" %}
+
+{% block content %}
+<div id="confetti-wrapper">
+    <div class="title-div">
+        <h1 class="title-nome">Vencedores - {{ nome_sorteio }} </h1>
+    </div>
+    <div class="winners-container">
+        
+        <ul class="winners-list">
+            {% for ganhador in vencedores %}
+            <li class="winner-item">
+                <div id="winner-div">
+                    <span class="position">{{ forloop.counter }}º Lugar </span>
+                    <span class="winner">{{ ganhador }}</span>
+                </div>
+            </li>    
+            {% endfor %}
+        </ul>
+        </div>
+        <div class="sub-title">Quantidade de participantes: {{ quantiade_participantes }} </div>
+        <div class="button-container">
+            <a class="button-link" href="{% url "sorteio:sorteio_nome" %}"><button class="retorno">Voltar</button></a>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const winners = document.querySelectorAll(".winner-item");
+    winners.forEach((winner, index) => {
+        setTimeout(() => {
+            winner.style.animationDelay = `${index * 0.6}s`;
+        }, 100);
+    });
+});
+
+    function createConfetti() {
+    const wrapper = document.getElementById('confetti-wrapper');
+    const confetti = document.createElement('div');
+    confetti.classList.add('confetti');
+    confetti.style.left = Math.random() * window.innerWidth + 'px';
+    wrapper.appendChild(confetti);
+
+    setTimeout(() => {
+        confetti.remove();
+    }, 2000); // Remove o confete após 2 segundos para evitar acumulação infinita
+    }
+
+    setInterval(createConfetti, 40); // Cria um novo confete a cada 100 milissegundos
+
+    
+</script>
+{% endblock content %}

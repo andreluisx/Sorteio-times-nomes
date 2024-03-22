@@ -1,0 +1,21 @@
+<div class="box-container">
+    {% for time in times %}
+        <div class="box fadeInAnimation" id="team">
+            <div class="time-number">Time {{ forloop.counter }}</div>
+            {% for jogador in time %}
+                <div class="jogador">{{ forloop.counter }}. {{ jogador }}</div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const winners = document.querySelectorAll(".box");
+    winners.forEach((winner, index) => {
+        setTimeout(() => {
+            winner.style.animationDelay = `${index * 0.6}s`;
+        }, 100);
+    });
+});
+</script>

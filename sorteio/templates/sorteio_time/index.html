@@ -1,0 +1,54 @@
+{% extends "global/base.html" %}
+{% block content %}
+<div class="main-container">
+    <div class="title-container">
+        <h1 class="title">Sorteio de</h1>
+        <h1 class="title" style="padding-left: 12px; color: #f53b3b;">Times</h1>
+    </div>
+    <div class="container">
+        <div class="content">
+            <!-- Elementos dentro da div principal -->
+            <div class="names">
+                <!-- Coluna 1 -->
+                <div class="column">
+                    <form method="post">
+                        {% csrf_token %}
+                        <h2 class="direcao">1. Coloque os nomes</h2>
+                        <textarea id="texto" class="input-box" oninput="contarLinhas()" name="nomes" placeholder="Coloque um nome em cada linha..." rows="5">{{ nomes }}</textarea>
+                        <h5 class="contador">Quantidade de nomes: <span id="totalLinhas">{{ total_linhas }}</span></h5>
+                        <p class="instrucao">Certifique-se de estar digitando uma quantidade coerente de nomes</p>
+                </div>
+
+                <!-- Coluna 2 -->
+                <div class="column">
+                    <h2 class="direcao">2. Quantidade de Times</h2>
+                    <select class="selection-box" name="quantidade_times">
+                        <option value="2" {% if quantidade_times == "2" %}selected{% endif %}>2</option>
+                        <option value="3" {% if quantidade_times == "3" %}selected{% endif %}>3</option>
+                        <option value="4" {% if quantidade_times == "4" %}selected{% endif %}>4</option>
+                        <option value="5" {% if quantidade_times == "5" %}selected{% endif %}>5</option>
+                    </select>
+
+                    <h2 class="direcao">3. Nome do sorteio</h2>
+                    <input type="text" id="texto-2" class="name-box" name="nome_sorteio" placeholder="Digite o nome do sorteio..." value="{{ nome_sorteio }}">
+                    <button type="submit" class="draw-button" name="submit_button">Sortear</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function contarLinhas() {
+        var texto = document.getElementById('texto').value;
+        var linhas = texto.split('\n').filter(function(line) {
+            return line.trim().length > 0;
+        }).length;
+        document.getElementById('totalLinhas').textContent = linhas;
+        saveFormData(); // Salva os dados sempre que houver uma alteração
+    }
+    // Adiciona eventos de escuta para salvar os dados sempre que houver uma mudan
+
+</script>
+
+{% endblock content %}

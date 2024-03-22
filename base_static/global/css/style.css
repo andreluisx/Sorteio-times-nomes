@@ -1,0 +1,666 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Altere para a fonte que você preferir */
+    background-color: #ebebeb;
+}
+
+/*----------------------- HEADER -----------------------*/
+
+.logo {
+    display: flex;
+    align-items: center center;
+}
+
+.img-logo{
+    width: 50px; /* Define a largura desejada */
+    height: auto; /* Mantém a proporção da imagem */
+    padding-right: 10px;
+    padding-left: 20px;
+}
+
+header {
+    background-color: #f7f7f7; /* Cor de fundo branca */
+    padding: 20px 90px 10px 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    font-size: 40px; /* Tamanho da fonte */
+    color: #292929;
+    font-weight: bold;
+    font-family: 'Grand Aventure Text', sans-serif; /* Exemplo de fonte personalizada */
+    margin: 10px 0px 0px 0px;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000000; /* Cor do texto */
+    margin-right: 20px; /* Espaçamento entre os itens do menu */
+    margin-bottom: 7px;
+}
+
+.doar {
+    border: none;
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 10px 20px;
+    background-color: #2ecc71; /* Cor de fundo verde */
+    color: #ffffff; /* Cor do texto */
+    font-weight: bold;
+    cursor: pointer;
+    width: 100px;
+    margin-bottom: 7px;
+}
+
+/* Estilo para o pop-up */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid red;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    
+}
+
+.container-popup {
+    padding-bottom: 30%;
+}
+
+/*----------------------- FOOTER -----------------------*/
+
+footer {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 30px 0;
+    padding-top: 90px;
+    margin-top: 10%;
+}
+
+.container-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-section {
+    width: 30%;
+    padding: 10px;
+}
+
+.footer-section h3 {
+    color: #f44336;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.footer-section a:hover {
+    color: #f44336;
+}
+
+.footer-section social i {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+.fabfa-facebook {
+    color: white;
+}
+
+#icon-2{
+    padding-right: 12px;
+}
+
+#icon-1, #icon-3 {
+    padding-right: 5px;
+}
+
+/*----------------------- INDEX -----------------------*/
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px; /* Espaçamento superior */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+}
+
+.content {
+    background-color: #f7f7f7;
+    padding: 20px 50px 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ajuste para que a largura seja 100% */
+    max-width: 800px; /* Define uma largura máxima */
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 30px;
+}
+
+/* Ajustando o título */
+.title {
+    font-size: 40px;
+    font-family: 'Glitter Candy DEMO Regular', sans-serif;
+    letter-spacing: 1.2px;
+    color: #292929;
+    margin-top: 0;
+    padding-bottom: 0px;
+}
+
+.input-box {
+    width: 39%;
+    height: 70%;
+    padding: 10px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    background-color: #fff;
+    resize: vertical; /* Permite redimensionar verticalmente */
+    box-sizing: border-box; /* Garante que o padding e a borda não alterem o tamanho total */
+}
+
+/* Adicionando estilo para a caixa de seleção de quantidade de times */
+.team-selection {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que as opções de times quebrem para a próxima linha */
+    gap: 10px; /* Espaço entre as opções de times */
+}
+
+#options {
+    display: inline-block;
+    padding: 8px 12px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+
+.names {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Estilo para as colunas */
+.column {
+    flex-basis: calc(50% - 20px);
+    flex-flow: 100%;
+}
+
+/* Estilo para os títulos das etapas */
+.direcao {
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Estilo para as caixas de seleção e entrada de texto */
+.selection-box{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #f53b3b;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.input-box {
+    width: 100%;
+    height: 200%;
+    padding: 10px;
+    border: 2px solid #f53b3b;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.name-box{
+    height: 20%;
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #f53b3b;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+/* Estilo para o botão de sortear */
+.draw-button {
+    display: flex;
+    margin-top: 10px; /* Espaço entre o botão e a caixa de entrada do nome do sorteio */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e63137; /* Vermelho */
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.draw-button:hover {
+    background-color: #b91b21; /* Cor de fundo ao passar o mouse */
+}
+
+.instrucao{
+    font-size: 12px;
+    
+}
+.contador{
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+
+footer {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-section {
+    width: 30%;
+    padding: 10px;
+}
+
+.footer-section h3 {
+    color: #f44336;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.footer-section a:hover {
+    color: #f44336;
+}
+
+.footer-section social i {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+/*-----------------------------RESULTADO----------------------------- */
+
+/* Estilo para as caixas */
+.box {
+    background-color: #f7f7f7; /* Cor branca */
+    padding: 20px 20px 40px 20px;
+    width: 24%;
+    border-radius: 8px;
+    text-align: center;
+    display: block;
+    justify-content: center;
+    margin-bottom: 20px; /* Ajustado para positivo */
+    font-family: 'Roboto', sans-serif; /* Fonte */
+    box-shadow: 1px 1px 2px #000000;
+}
+
+.fadeInAnimation {
+    animation: fadeIn 1s ease-in forwards; /* Animação de fadeIn */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Começa com opacidade 0 */
+    }
+    to {
+        opacity: 1; /* Termina com opacidade 1 */
+    }
+}
+/* Estilo para o contêiner das caixas */
+.box-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre as caixas */
+    margin-top: 30px; /* Ajustado para adicionar espaço acima das caixas */
+    padding: 10px 60px 0px 60px;
+}
+
+.title2 {
+    font-size: 40px;
+    font-family: 'Glitter Candy DEMO Regular', sans-serif;
+    letter-spacing: 1.2px;
+    color: #292929;
+    padding-bottom: 0px;
+    text-align: center; /* Alinha o texto no centro */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    margin-top: 53px;
+}
+
+.time-number {
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-weight: bold;
+    background-color: #f53b3b;
+    border-radius: 8px;
+    height: 10%;
+    width: 80%;
+    /* Adicione estas propriedades para centralizar */
+    margin: 0 auto; /* Define as margens laterais como automáticas */
+    text-align: center; /* Alinha o conteúdo no centro */
+    display: flex; /* Permite o alinhamento vertical */
+    justify-content: center; /* Alinha o conteúdo horizontalmente */
+    align-items: center; /* Alinha o conteúdo verticalmente */
+}
+.jogador {
+    list-style-type: none; /* Remover marcadores de lista */
+    padding: 14px 0px 0px 0px; /* Espaçamento interno */
+    margin: 0; /* Margem zero */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: bold;
+}
+
+/* Estilo para o último item da lista */
+.jogadores:last-child {
+    border-bottom: none; /* Remover linha divisória do último item */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+.retorno {
+    text-decoration: none;
+    display: flex;
+    margin-top: 10px; /* Espaço entre o botão e a caixa de entrada do nome do sorteio */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e63137; /* Vermelho */
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sub-title {
+    text-align: center;
+}
+
+.button-link{
+    text-decoration: none;
+}
+
+/* Estilo quando o cursor passa por cima */
+.retorno:hover {
+    background-color: #b91b21; /* Cor de fundo ao passar o mouse */
+}
+
+/*--------------------------------SOBRE MIM---------------------------- */
+
+/* Estilo para a seção "Sobre Mim" */
+.sobre {
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+    margin-bottom: 20px; /* Adiciona um espaço na parte inferior */
+}
+
+/* Estilo para o texto da biografia */
+.textosobre {
+    width: 80%; /* Define a largura do elemento para 80% */
+    margin: 0 auto; /* Centraliza o elemento horizontalmente */
+    padding: 20px; /* Adiciona espaço interno */
+    background-color: #f5f5f5; /* Cor de fundo */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+/* Estilo para os títulos */
+h1, h3 {
+    color: #333; /* Cor do texto */
+}
+
+/* Estilo para o título principal */
+h1 {
+    font-size: 36px; /* Tamanho da fonte */
+}
+
+/* Estilo para o subtítulo */
+h3 {
+    font-size: 20px; /* Tamanho da fonte */
+    margin-top: 20px; /* Adiciona um espaço acima */
+}
+
+/* Estilo para o texto */
+.textosobre h3 {
+    line-height: 1.6; /* Altura da linha */
+}
+
+/* Estilo para links */
+.textosobre a {
+    color: #007bff; /* Cor do link */
+    text-decoration: none; /* Remove a sublinhado padrão */
+}
+
+.textosobre a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/*------------------------- RESULTADO NOME ---------------------- */
+
+.confetti {
+    width: 5px;
+    height: 5px;
+    background-color: rgb(0, 255, 21);
+    position: absolute;
+    top: -10px;
+    animation: fall 2s infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateY(650px);
+    }
+}
+
+
+.winners-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 30%;
+}
+
+.winners-list {
+    list-style: none;
+    padding: 0;
+    
+}
+
+.winners-list li {
+    margin-bottom: 20px;
+    border: 2px solid red; /* Adicionando borda vermelha */
+    padding: 10px;
+    background-color: white; /* Fundo branco */
+    border-radius: 8px; /* Borda arredondada */
+}
+
+.position {
+    margin-right: 10px;
+}
+
+
+.winner {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#winner-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 7px;
+}
+
+.title-div {
+    padding-top: 20px;
+    padding-bottom: 5px;
+    align-items: center;
+    text-align: center;
+}
+.title-nome {
+    font-size: 40px;
+    font-family: 'Glitter Candy DEMO Regular', sans-serif;
+    letter-spacing: 1.2px;
+    color: #292929;
+    margin-bottom: 0px;
+}
+
+/* Restante do seu CSS */
+
+.winner-item {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-400%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* ---------------------------- PAGINA INCIAL ----------------------- */
+
+.container-geral {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px 0px 65px 0px;
+    text-align: center;
+}
+
+.header-page {
+    margin-bottom: 50px;
+}
+
+.header-page h1 {
+    color: #292929;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.header-page p {
+    color: #353535;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.content-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-button {
+    width: 200px;
+    height: 90px;
+    background-color: #ffffff;
+    border: 2px solid #f44336;
+    border-radius: 10px;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-button:hover {
+    transform: scale(1.1);
+    color: #f44336;
+    background-color: #f44336;
+}
+
+.box-button h2 {
+    color: #292929;
+    font-size: 24px;
+}
+
+.botao-menu {
+    text-decoration: none;
+}

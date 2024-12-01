@@ -2,17 +2,10 @@
 
 ## ⚒️ Funcionalidades
 
-- **Autenticação de usuário**
+- **Sorteio de até 5 times**
+
+- **Sorteio de até 4 nomes com colocação**
   
-- **Recuperação de senha**
-  
-- **Editar informações de usuário**
-  
-- **Listagem completa de animais postados**
-  
-- **Listas especificas como "Meus animais" e "Animais curtidos"**
-  
-- **Sistema de paginação, busca e filtro para as listas**
 
 ## 🖥️ Telas - Sorteio de times
 ### Tela de inserção de nomes e configurações ( TIMES ):

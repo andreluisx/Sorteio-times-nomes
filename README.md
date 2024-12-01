@@ -23,7 +23,7 @@
 
 ## :rocket: Tecnologias Utilizadas
 
-- **Front-end: Django Html, Css, Bootstrap**
+- **Front-end: Django Html, Css**
 
 - **Back-end: Django**
 

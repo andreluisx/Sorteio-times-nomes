@@ -1,4 +1,5 @@
 # Sorteio de Times e Nomes
+<img src="https://github.com/user-attachments/assets/642a906e-177f-4f28-b752-d70bb673cc0e" alt="Tela Principal" width="450" />
 
 ## ⚒️ Funcionalidades
 
